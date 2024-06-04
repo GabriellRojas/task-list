@@ -1,0 +1,139 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4f4f4f;
+}
+
+.app {
+    height: 1dvh;
+}
+
+header {
+    height: 200px;
+    background-color: #1c1c1c;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 600px;
+    padding: 20px;
+    margin: -65px auto 291px;
+
+    border-radius: 6px 6px 0 0;
+    background-color: #fff;
+}
+
+.container h1 {
+    margin-bottom: 35px;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.search h3 {
+    margin: 10px 0;
+}
+
+button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    color: #fff;
+    background-color: #794cd2;
+    opacity: .8;
+    transition: .2s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.todo_list {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid #959595c8;
+}
+
+.todo {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+    background-color: #f2f2f2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.complete {
+    background-color: #4da472;
+}
+
+.remove {
+    background-color: rgba(255, 71, 71, 0.841);
+}
+
+.todo_form {
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+input, select {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin-bottom: 10px;
+
+    font-size: 1em;
+
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    border-style: none;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 1px solid #6d6d6d;
+}
+
+input::placeholder {
+    font-size: 0.9em;
+}
+
+select:focus {
+    outline: 1px solid #979797;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    color: #DDD;
+    background-color: #1c1c1c;
+}
