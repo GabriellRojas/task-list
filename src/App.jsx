@@ -1,11 +1,11 @@
 import { useState } from 'react'
-
 import './App.css'
 
 import { Todo } from './components/Todo'
 import { TodoForm } from './components/TodoForm'
 import { Footer } from './components/Footer'
 import { Search } from './components/Search'
+import { Filter } from './components/Fiter'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -28,6 +28,11 @@ function App() {
       idCompleted: false
     }
   ])
+
+  const [search, setSearch] = useState('')
+
+  const [filter, setFilter] = useState('all')
+  const [sort, setSort] = useState('Asc')
 
   const addTodo = (text, category) => {
     const newTodos = [
@@ -58,19 +63,29 @@ function App() {
     setTodos(newTodos)
   }
 
-  const [search, setSearch] = useState('')
-
   return (
     <div className='app'>
       <header></header>
       <div className='container'>
           <h1>Lista de tasks</h1>
           <Search search={search} setSearch={setSearch}/>
+          <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
 
           <div className="todo_list">
             {todos
+              .filter((todo) => filter === "all" 
+              ? true 
+              : filter === "completed" 
+              ? todo.isCompleted 
+              : !todo.isCompleted
+            )
               .filter((todo) => 
                 todo.text.toLowerCase().includes(search.toLocaleLowerCase()))
+              .sort((a, b)  => 
+                sort === "Asc"
+                  ? a.text.localeCompare(b.text) 
+                  : b.text.localeCompare(a.text)
+              )
               .map((todo) => (
                 <Todo todo={todo} key={todo.id} removeTodo={removeTodo} completeTodo={completeTodo}/>
               ))}
