@@ -20,7 +20,7 @@ Para clonar repositório do aplicativo, é necessário possuir o **[node.js](htt
 Você consegue fazer através do NPM (gerenciador de pacotes para node):
 </br>
 
-```c++
+```bash
 
 # clone este repositório
 $ git glone github.com/gabrielrojas/task-list.git
