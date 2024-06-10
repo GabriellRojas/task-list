@@ -5,9 +5,9 @@
  ## 📃 sobre o projeto
 Esta é uma aplicação web de To Do list, onde é possível criar tasks (tarefas) escolhendo entre três categorias; pessoal, estudos e trabalho. </br>
 
-A ferramenta também conta com opções de filtros, send possível filtrar por tasks completas e incompletas, como também lista-las por ordem alfabéticas ascendente e descendente. </br>
+A ferramenta também conta com opções de filtros, sendo possível filtrar por tasks completas e incompletas, como também lista-las por ordem alfabéticas ascendente e descendente. </br>
 
-🚧 Deploy do projeto em breve... 🚧
+Abra o aplicativo em seu navegador **[clicando aqui](https://task-list-rojas.netlify.app/)**
 
 ## tecnologias utilizadas
 - [ReactJS 18](https://react.dev/)
